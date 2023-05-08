@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace estudoCasoLojaInfo
@@ -17,7 +10,7 @@ namespace estudoCasoLojaInfo
         {
             InitializeComponent();
         }
-        
+
         private void FEntrada_Shown(object sender, EventArgs e)
         {
             lblCarregar.Text = "Carregando o sistema...";
@@ -33,7 +26,7 @@ namespace estudoCasoLojaInfo
             Thread.Sleep(500);
 
             this.Hide();
-            
+
             var frmLoja = new FLoja();
             frmLoja.Show();
         }

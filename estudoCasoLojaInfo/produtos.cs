@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Forms;
 
 namespace estudoCasoLojaInfo
 {
@@ -33,8 +29,22 @@ namespace estudoCasoLojaInfo
             set { preco = value; }
         }
 
-        public void Comprar(produtos produto)
+        public void Comprar(int result)
         {
+            estoque += result;
+        }
+
+        public void Vender(int result)
+        {
+            int estoqueBackup;
+            estoqueBackup = estoque;
+            estoque -= result;
+
+            if (estoque < 0)
+            {
+                MessageBox.Show($"O valor de venda é maior do que o valor do estoque!!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                estoque = estoqueBackup;
+            }
 
         }
 
