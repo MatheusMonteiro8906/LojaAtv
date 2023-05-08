@@ -250,7 +250,7 @@ namespace estudoCasoLojaInfo
             catch (Exception)
             {
 
-                DialogResult resultado = MessageBox.Show($"Por favor digite valores válidos!!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Por favor digite valores válidos!!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
