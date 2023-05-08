@@ -33,8 +33,10 @@ namespace estudoCasoLojaInfo
             set { preco = value; }
         }
 
+        public void Comprar(produtos produto)
+        {
 
-
+        }
 
     }
 }

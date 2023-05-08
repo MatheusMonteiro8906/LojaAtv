@@ -33,11 +33,6 @@ namespace estudoCasoLojaInfo
                 txtLucro.Enabled = false;
         }
 
-        public void Comprar()
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
