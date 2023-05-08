@@ -48,5 +48,11 @@ namespace estudoCasoLojaInfo
 
         }
 
+        string path = "";
+        public void pesquisar()
+        {
+
+        }
+
     }
 }

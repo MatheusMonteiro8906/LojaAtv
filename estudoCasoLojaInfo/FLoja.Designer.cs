@@ -231,6 +231,7 @@ namespace estudoCasoLojaInfo
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(157, 32);
             this.txtQuantidade.TabIndex = 9;
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             // 
             // tabVenda
             // 

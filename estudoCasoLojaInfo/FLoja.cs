@@ -258,6 +258,10 @@ namespace estudoCasoLojaInfo
         {
             Salvar();
         }
+
+        private void txtQuantidade_TextChanged(object sender, EventArgs e)
+        {
+            ativarLucro();
+        }
     }
 }
-
