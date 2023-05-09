@@ -29,410 +29,417 @@ namespace estudoCasoLojaInfo
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboProduto = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabMovimentacao = new System.Windows.Forms.TabControl();
-            this.tabCompra = new System.Windows.Forms.TabPage();
-            this.txtVenda = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPrecoCusto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtLucro = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTotalPagar = new System.Windows.Forms.TextBox();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.tabVenda = new System.Windows.Forms.TabPage();
-            this.cboOperacao = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cboProdutoEntrada = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtMovimentacao = new System.Windows.Forms.TextBox();
-            this.txtEstoque = new System.Windows.Forms.TextBox();
-            this.txtBoxArquivo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnArquivo = new System.Windows.Forms.Button();
-            this.tabMovimentacao.SuspendLayout();
-            this.tabCompra.SuspendLayout();
-            this.tabVenda.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLoja));
+            cboProduto = new System.Windows.Forms.ComboBox();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            tabMovimentacao = new System.Windows.Forms.TabControl();
+            tabCompra = new System.Windows.Forms.TabPage();
+            txtVenda = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            txtPrecoCusto = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            txtLucro = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            txtTotalPagar = new System.Windows.Forms.TextBox();
+            txtQuantidade = new System.Windows.Forms.TextBox();
+            tabVenda = new System.Windows.Forms.TabPage();
+            cboOperacao = new System.Windows.Forms.ComboBox();
+            label11 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            cboProdutoEntrada = new System.Windows.Forms.ComboBox();
+            label10 = new System.Windows.Forms.Label();
+            txtMovimentacao = new System.Windows.Forms.TextBox();
+            txtEstoque = new System.Windows.Forms.TextBox();
+            txtBoxArquivo = new System.Windows.Forms.TextBox();
+            label9 = new System.Windows.Forms.Label();
+            btnPesquisar = new System.Windows.Forms.Button();
+            btnNovo = new System.Windows.Forms.Button();
+            btnSalvar = new System.Windows.Forms.Button();
+            btnArquivo = new System.Windows.Forms.Button();
+            btnExcel = new System.Windows.Forms.Button();
+            tabMovimentacao.SuspendLayout();
+            tabCompra.SuspendLayout();
+            tabVenda.SuspendLayout();
+            SuspendLayout();
             // 
             // cboProduto
             // 
-            this.cboProduto.Enabled = false;
-            this.cboProduto.FormattingEnabled = true;
-            this.cboProduto.Items.AddRange(new object[] {
-            "HD 500 GB",
-            "HD 1TB",
-            "PENDRIVE",
-            "MONITOR",
-            "CABO HDMI"});
-            this.cboProduto.Location = new System.Drawing.Point(196, 57);
-            this.cboProduto.Margin = new System.Windows.Forms.Padding(6);
-            this.cboProduto.Name = "cboProduto";
-            this.cboProduto.Size = new System.Drawing.Size(226, 33);
-            this.cboProduto.TabIndex = 8;
+            cboProduto.Enabled = false;
+            cboProduto.FormattingEnabled = true;
+            cboProduto.Items.AddRange(new object[] { "HD 500 GB", "HD 1TB", "PENDRIVE", "MONITOR", "CABO HDMI" });
+            cboProduto.Location = new System.Drawing.Point(196, 57);
+            cboProduto.Margin = new System.Windows.Forms.Padding(6);
+            cboProduto.Name = "cboProduto";
+            cboProduto.Size = new System.Drawing.Size(226, 46);
+            cboProduto.TabIndex = 8;
+            cboProduto.SelectedIndexChanged += cboProduto_SelectedIndexChanged;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Produto:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(104, 62);
+            label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(122, 38);
+            label2.TabIndex = 13;
+            label2.Text = "Produto:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 153);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Estoque:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(104, 153);
+            label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(121, 38);
+            label1.TabIndex = 11;
+            label1.Text = "Estoque:";
             // 
             // tabMovimentacao
             // 
-            this.tabMovimentacao.Controls.Add(this.tabCompra);
-            this.tabMovimentacao.Controls.Add(this.tabVenda);
-            this.tabMovimentacao.Location = new System.Drawing.Point(104, 239);
-            this.tabMovimentacao.Margin = new System.Windows.Forms.Padding(6);
-            this.tabMovimentacao.Name = "tabMovimentacao";
-            this.tabMovimentacao.SelectedIndex = 0;
-            this.tabMovimentacao.Size = new System.Drawing.Size(768, 208);
-            this.tabMovimentacao.TabIndex = 12;
+            tabMovimentacao.Controls.Add(tabCompra);
+            tabMovimentacao.Controls.Add(tabVenda);
+            tabMovimentacao.Location = new System.Drawing.Point(104, 239);
+            tabMovimentacao.Margin = new System.Windows.Forms.Padding(6);
+            tabMovimentacao.Name = "tabMovimentacao";
+            tabMovimentacao.SelectedIndex = 0;
+            tabMovimentacao.Size = new System.Drawing.Size(768, 208);
+            tabMovimentacao.TabIndex = 12;
             // 
             // tabCompra
             // 
-            this.tabCompra.BackColor = System.Drawing.Color.Transparent;
-            this.tabCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabCompra.Controls.Add(this.txtVenda);
-            this.tabCompra.Controls.Add(this.label5);
-            this.tabCompra.Controls.Add(this.txtPrecoCusto);
-            this.tabCompra.Controls.Add(this.label4);
-            this.tabCompra.Controls.Add(this.txtLucro);
-            this.tabCompra.Controls.Add(this.label3);
-            this.tabCompra.Controls.Add(this.label7);
-            this.tabCompra.Controls.Add(this.label6);
-            this.tabCompra.Controls.Add(this.txtTotalPagar);
-            this.tabCompra.Controls.Add(this.txtQuantidade);
-            this.tabCompra.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabCompra.Location = new System.Drawing.Point(4, 34);
-            this.tabCompra.Margin = new System.Windows.Forms.Padding(6);
-            this.tabCompra.Name = "tabCompra";
-            this.tabCompra.Padding = new System.Windows.Forms.Padding(6);
-            this.tabCompra.Size = new System.Drawing.Size(760, 170);
-            this.tabCompra.TabIndex = 0;
-            this.tabCompra.Text = "Gerenciador";
+            tabCompra.BackColor = System.Drawing.Color.Transparent;
+            tabCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            tabCompra.Controls.Add(txtVenda);
+            tabCompra.Controls.Add(label5);
+            tabCompra.Controls.Add(txtPrecoCusto);
+            tabCompra.Controls.Add(label4);
+            tabCompra.Controls.Add(txtLucro);
+            tabCompra.Controls.Add(label3);
+            tabCompra.Controls.Add(label7);
+            tabCompra.Controls.Add(label6);
+            tabCompra.Controls.Add(txtTotalPagar);
+            tabCompra.Controls.Add(txtQuantidade);
+            tabCompra.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            tabCompra.Location = new System.Drawing.Point(4, 47);
+            tabCompra.Margin = new System.Windows.Forms.Padding(6);
+            tabCompra.Name = "tabCompra";
+            tabCompra.Padding = new System.Windows.Forms.Padding(6);
+            tabCompra.Size = new System.Drawing.Size(760, 157);
+            tabCompra.TabIndex = 0;
+            tabCompra.Text = "Gerenciador";
             // 
             // txtVenda
             // 
-            this.txtVenda.Enabled = false;
-            this.txtVenda.Location = new System.Drawing.Point(518, 131);
-            this.txtVenda.Margin = new System.Windows.Forms.Padding(6);
-            this.txtVenda.Name = "txtVenda";
-            this.txtVenda.ReadOnly = true;
-            this.txtVenda.Size = new System.Drawing.Size(199, 32);
-            this.txtVenda.TabIndex = 13;
+            txtVenda.Enabled = false;
+            txtVenda.Location = new System.Drawing.Point(518, 131);
+            txtVenda.Margin = new System.Windows.Forms.Padding(6);
+            txtVenda.Name = "txtVenda";
+            txtVenda.ReadOnly = true;
+            txtVenda.Size = new System.Drawing.Size(199, 45);
+            txtVenda.TabIndex = 13;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(518, 100);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 25);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Preço de venda (unitário):";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(518, 100);
+            label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(333, 38);
+            label5.TabIndex = 14;
+            label5.Text = "Preço de venda (unitário):";
             // 
             // txtPrecoCusto
             // 
-            this.txtPrecoCusto.Enabled = false;
-            this.txtPrecoCusto.Location = new System.Drawing.Point(280, 62);
-            this.txtPrecoCusto.Margin = new System.Windows.Forms.Padding(6);
-            this.txtPrecoCusto.Name = "txtPrecoCusto";
-            this.txtPrecoCusto.Size = new System.Drawing.Size(183, 32);
-            this.txtPrecoCusto.TabIndex = 5;
-            this.txtPrecoCusto.TextChanged += new System.EventHandler(this.txtPrecoCusto_TextChanged_1);
+            txtPrecoCusto.Enabled = false;
+            txtPrecoCusto.Location = new System.Drawing.Point(280, 62);
+            txtPrecoCusto.Margin = new System.Windows.Forms.Padding(6);
+            txtPrecoCusto.Name = "txtPrecoCusto";
+            txtPrecoCusto.Size = new System.Drawing.Size(183, 45);
+            txtPrecoCusto.TabIndex = 5;
+            txtPrecoCusto.TextChanged += txtPrecoCusto_TextChanged_1;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(552, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "% Lucro:";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(552, 18);
+            label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(122, 38);
+            label4.TabIndex = 8;
+            label4.Text = "% Lucro:";
             // 
             // txtLucro
             // 
-            this.txtLucro.Enabled = false;
-            this.txtLucro.Location = new System.Drawing.Point(552, 62);
-            this.txtLucro.Margin = new System.Windows.Forms.Padding(6);
-            this.txtLucro.Name = "txtLucro";
-            this.txtLucro.Size = new System.Drawing.Size(110, 32);
-            this.txtLucro.TabIndex = 7;
-            this.txtLucro.TextChanged += new System.EventHandler(this.txtLucro_TextChanged_1);
+            txtLucro.Enabled = false;
+            txtLucro.Location = new System.Drawing.Point(552, 62);
+            txtLucro.Margin = new System.Windows.Forms.Padding(6);
+            txtLucro.Name = "txtLucro";
+            txtLucro.Size = new System.Drawing.Size(110, 45);
+            txtLucro.TabIndex = 7;
+            txtLucro.TextChanged += txtLucro_TextChanged_1;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(279, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Preço de custo:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(279, 18);
+            label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(206, 38);
+            label3.TabIndex = 6;
+            label3.Text = "Preço de custo:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 100);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(249, 25);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Total a pagar ao fornecedor:";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(39, 100);
+            label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(363, 38);
+            label7.TabIndex = 12;
+            label7.Text = "Total a pagar ao fornecedor:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Quantidade:";
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(39, 18);
+            label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(167, 38);
+            label6.TabIndex = 10;
+            label6.Text = "Quantidade:";
             // 
             // txtTotalPagar
             // 
-            this.txtTotalPagar.Enabled = false;
-            this.txtTotalPagar.Location = new System.Drawing.Point(39, 131);
-            this.txtTotalPagar.Margin = new System.Windows.Forms.Padding(6);
-            this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.ReadOnly = true;
-            this.txtTotalPagar.Size = new System.Drawing.Size(225, 32);
-            this.txtTotalPagar.TabIndex = 11;
+            txtTotalPagar.Enabled = false;
+            txtTotalPagar.Location = new System.Drawing.Point(39, 131);
+            txtTotalPagar.Margin = new System.Windows.Forms.Padding(6);
+            txtTotalPagar.Name = "txtTotalPagar";
+            txtTotalPagar.ReadOnly = true;
+            txtTotalPagar.Size = new System.Drawing.Size(225, 45);
+            txtTotalPagar.TabIndex = 11;
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Enabled = false;
-            this.txtQuantidade.Location = new System.Drawing.Point(39, 62);
-            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(6);
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(157, 32);
-            this.txtQuantidade.TabIndex = 9;
-            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
+            txtQuantidade.Enabled = false;
+            txtQuantidade.Location = new System.Drawing.Point(39, 62);
+            txtQuantidade.Margin = new System.Windows.Forms.Padding(6);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new System.Drawing.Size(157, 45);
+            txtQuantidade.TabIndex = 9;
+            txtQuantidade.TextChanged += txtQuantidade_TextChanged;
             // 
             // tabVenda
             // 
-            this.tabVenda.BackColor = System.Drawing.Color.Transparent;
-            this.tabVenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabVenda.Controls.Add(this.cboOperacao);
-            this.tabVenda.Controls.Add(this.label11);
-            this.tabVenda.Controls.Add(this.label8);
-            this.tabVenda.Controls.Add(this.cboProdutoEntrada);
-            this.tabVenda.Controls.Add(this.label10);
-            this.tabVenda.Controls.Add(this.txtMovimentacao);
-            this.tabVenda.Location = new System.Drawing.Point(4, 34);
-            this.tabVenda.Margin = new System.Windows.Forms.Padding(6);
-            this.tabVenda.Name = "tabVenda";
-            this.tabVenda.Padding = new System.Windows.Forms.Padding(6);
-            this.tabVenda.Size = new System.Drawing.Size(760, 170);
-            this.tabVenda.TabIndex = 1;
-            this.tabVenda.Text = "Entrada e saída";
+            tabVenda.BackColor = System.Drawing.Color.Transparent;
+            tabVenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            tabVenda.Controls.Add(cboOperacao);
+            tabVenda.Controls.Add(label11);
+            tabVenda.Controls.Add(label8);
+            tabVenda.Controls.Add(cboProdutoEntrada);
+            tabVenda.Controls.Add(label10);
+            tabVenda.Controls.Add(txtMovimentacao);
+            tabVenda.Location = new System.Drawing.Point(4, 47);
+            tabVenda.Margin = new System.Windows.Forms.Padding(6);
+            tabVenda.Name = "tabVenda";
+            tabVenda.Padding = new System.Windows.Forms.Padding(6);
+            tabVenda.Size = new System.Drawing.Size(760, 157);
+            tabVenda.TabIndex = 1;
+            tabVenda.Text = "Entrada e saída";
             // 
             // cboOperacao
             // 
-            this.cboOperacao.Enabled = false;
-            this.cboOperacao.FormattingEnabled = true;
-            this.cboOperacao.Items.AddRange(new object[] {
-            "Compra",
-            "Venda"});
-            this.cboOperacao.Location = new System.Drawing.Point(517, 71);
-            this.cboOperacao.Margin = new System.Windows.Forms.Padding(6);
-            this.cboOperacao.Name = "cboOperacao";
-            this.cboOperacao.Size = new System.Drawing.Size(226, 33);
-            this.cboOperacao.TabIndex = 25;
-            this.cboOperacao.SelectedIndexChanged += new System.EventHandler(this.cboOperacao_SelectedIndexChanged_1);
+            cboOperacao.Enabled = false;
+            cboOperacao.FormattingEnabled = true;
+            cboOperacao.Items.AddRange(new object[] { "Compra", "Venda" });
+            cboOperacao.Location = new System.Drawing.Point(517, 71);
+            cboOperacao.Margin = new System.Windows.Forms.Padding(6);
+            cboOperacao.Name = "cboOperacao";
+            cboOperacao.Size = new System.Drawing.Size(226, 46);
+            cboOperacao.TabIndex = 25;
+            cboOperacao.SelectedIndexChanged += cboOperacao_SelectedIndexChanged_1;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 41);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 25);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Operação:";
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(517, 41);
+            label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(142, 38);
+            label11.TabIndex = 24;
+            label11.Text = "Operação:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 41);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Produto:";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(24, 41);
+            label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(122, 38);
+            label8.TabIndex = 22;
+            label8.Text = "Produto:";
             // 
             // cboProdutoEntrada
             // 
-            this.cboProdutoEntrada.Enabled = false;
-            this.cboProdutoEntrada.FormattingEnabled = true;
-            this.cboProdutoEntrada.Items.AddRange(new object[] {
-            "HD 500 GB",
-            "HD 1TB",
-            "PENDRIVE",
-            "MONITOR",
-            "CABO HDMI"});
-            this.cboProdutoEntrada.Location = new System.Drawing.Point(24, 71);
-            this.cboProdutoEntrada.Margin = new System.Windows.Forms.Padding(6);
-            this.cboProdutoEntrada.Name = "cboProdutoEntrada";
-            this.cboProdutoEntrada.Size = new System.Drawing.Size(226, 33);
-            this.cboProdutoEntrada.TabIndex = 22;
+            cboProdutoEntrada.Enabled = false;
+            cboProdutoEntrada.FormattingEnabled = true;
+            cboProdutoEntrada.Items.AddRange(new object[] { "HD 500 GB", "HD 1TB", "PENDRIVE", "MONITOR", "CABO HDMI" });
+            cboProdutoEntrada.Location = new System.Drawing.Point(24, 71);
+            cboProdutoEntrada.Margin = new System.Windows.Forms.Padding(6);
+            cboProdutoEntrada.Name = "cboProdutoEntrada";
+            cboProdutoEntrada.Size = new System.Drawing.Size(226, 46);
+            cboProdutoEntrada.TabIndex = 22;
+            cboProdutoEntrada.SelectedIndexChanged += cboProdutoEntrada_SelectedIndexChanged;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(286, 41);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 25);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Movimentação:";
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(286, 41);
+            label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(205, 38);
+            label10.TabIndex = 19;
+            label10.Text = "Movimentação:";
             // 
             // txtMovimentacao
             // 
-            this.txtMovimentacao.Enabled = false;
-            this.txtMovimentacao.Location = new System.Drawing.Point(286, 72);
-            this.txtMovimentacao.Margin = new System.Windows.Forms.Padding(6);
-            this.txtMovimentacao.Name = "txtMovimentacao";
-            this.txtMovimentacao.Size = new System.Drawing.Size(207, 32);
-            this.txtMovimentacao.TabIndex = 18;
+            txtMovimentacao.Enabled = false;
+            txtMovimentacao.Location = new System.Drawing.Point(286, 72);
+            txtMovimentacao.Margin = new System.Windows.Forms.Padding(6);
+            txtMovimentacao.Name = "txtMovimentacao";
+            txtMovimentacao.Size = new System.Drawing.Size(207, 45);
+            txtMovimentacao.TabIndex = 18;
             // 
             // txtEstoque
             // 
-            this.txtEstoque.Location = new System.Drawing.Point(204, 153);
-            this.txtEstoque.Margin = new System.Windows.Forms.Padding(6);
-            this.txtEstoque.Name = "txtEstoque";
-            this.txtEstoque.ReadOnly = true;
-            this.txtEstoque.Size = new System.Drawing.Size(155, 32);
-            this.txtEstoque.TabIndex = 10;
+            txtEstoque.Location = new System.Drawing.Point(204, 153);
+            txtEstoque.Margin = new System.Windows.Forms.Padding(6);
+            txtEstoque.Name = "txtEstoque";
+            txtEstoque.ReadOnly = true;
+            txtEstoque.Size = new System.Drawing.Size(155, 45);
+            txtEstoque.TabIndex = 10;
             // 
             // txtBoxArquivo
             // 
-            this.txtBoxArquivo.Location = new System.Drawing.Point(94, 507);
-            this.txtBoxArquivo.Margin = new System.Windows.Forms.Padding(6);
-            this.txtBoxArquivo.Multiline = true;
-            this.txtBoxArquivo.Name = "txtBoxArquivo";
-            this.txtBoxArquivo.ReadOnly = true;
-            this.txtBoxArquivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBoxArquivo.Size = new System.Drawing.Size(795, 181);
-            this.txtBoxArquivo.TabIndex = 9;
+            txtBoxArquivo.Location = new System.Drawing.Point(94, 507);
+            txtBoxArquivo.Margin = new System.Windows.Forms.Padding(6);
+            txtBoxArquivo.Multiline = true;
+            txtBoxArquivo.Name = "txtBoxArquivo";
+            txtBoxArquivo.ReadOnly = true;
+            txtBoxArquivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            txtBoxArquivo.Size = new System.Drawing.Size(795, 181);
+            txtBoxArquivo.TabIndex = 9;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(344, 464);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(258, 25);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Histórico de Compra e Venda";
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(344, 464);
+            label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(378, 38);
+            label9.TabIndex = 16;
+            label9.Text = "Histórico de Compra e Venda";
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisar.Enabled = false;
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Image = global::estudoCasoLojaInfo.Properties.Resources.pesquisa;
-            this.btnPesquisar.Location = new System.Drawing.Point(431, 41);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(63, 67);
-            this.btnPesquisar.TabIndex = 18;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            btnPesquisar.BackColor = System.Drawing.Color.Transparent;
+            btnPesquisar.Enabled = false;
+            btnPesquisar.FlatAppearance.BorderSize = 0;
+            btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnPesquisar.Image = Properties.Resources.pesquisa;
+            btnPesquisar.Location = new System.Drawing.Point(431, 41);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Size = new System.Drawing.Size(63, 67);
+            btnPesquisar.TabIndex = 18;
+            btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnNovo
             // 
-            this.btnNovo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Image = global::estudoCasoLojaInfo.Properties.Resources.novo;
-            this.btnNovo.Location = new System.Drawing.Point(901, 273);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(92, 83);
-            this.btnNovo.TabIndex = 19;
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            btnNovo.BackColor = System.Drawing.Color.Transparent;
+            btnNovo.FlatAppearance.BorderSize = 0;
+            btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnNovo.Image = Properties.Resources.novo;
+            btnNovo.Location = new System.Drawing.Point(901, 273);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new System.Drawing.Size(92, 83);
+            btnNovo.TabIndex = 19;
+            btnNovo.UseVisualStyleBackColor = false;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Image = global::estudoCasoLojaInfo.Properties.Resources.salvar;
-            this.btnSalvar.Location = new System.Drawing.Point(901, 362);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(93, 85);
-            this.btnSalvar.TabIndex = 20;
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            btnSalvar.Enabled = false;
+            btnSalvar.FlatAppearance.BorderSize = 0;
+            btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnSalvar.Image = Properties.Resources.salvar;
+            btnSalvar.Location = new System.Drawing.Point(901, 362);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new System.Drawing.Size(93, 85);
+            btnSalvar.TabIndex = 20;
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnArquivo
             // 
-            this.btnArquivo.BackColor = System.Drawing.Color.Transparent;
-            this.btnArquivo.Enabled = false;
-            this.btnArquivo.FlatAppearance.BorderSize = 0;
-            this.btnArquivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArquivo.Image = global::estudoCasoLojaInfo.Properties.Resources.consultar;
-            this.btnArquivo.Location = new System.Drawing.Point(911, 543);
-            this.btnArquivo.Name = "btnArquivo";
-            this.btnArquivo.Size = new System.Drawing.Size(92, 88);
-            this.btnArquivo.TabIndex = 21;
-            this.btnArquivo.UseVisualStyleBackColor = false;
+            btnArquivo.BackColor = System.Drawing.Color.Transparent;
+            btnArquivo.Enabled = false;
+            btnArquivo.FlatAppearance.BorderSize = 0;
+            btnArquivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnArquivo.Image = Properties.Resources.consultar;
+            btnArquivo.Location = new System.Drawing.Point(902, 507);
+            btnArquivo.Name = "btnArquivo";
+            btnArquivo.Size = new System.Drawing.Size(92, 88);
+            btnArquivo.TabIndex = 21;
+            btnArquivo.UseVisualStyleBackColor = false;
+            btnArquivo.Click += btnArquivo_Click;
+            // 
+            // btnExcel
+            // 
+            btnExcel.BackColor = System.Drawing.Color.Transparent;
+            btnExcel.Enabled = false;
+            btnExcel.FlatAppearance.BorderSize = 0;
+            btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExcel.Image = (System.Drawing.Image)resources.GetObject("btnExcel.Image");
+            btnExcel.Location = new System.Drawing.Point(898, 601);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new System.Drawing.Size(86, 76);
+            btnExcel.TabIndex = 22;
+            btnExcel.UseVisualStyleBackColor = false;
+            btnExcel.Click += button1_Click_1;
             // 
             // FLoja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 719);
-            this.Controls.Add(this.btnArquivo);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtBoxArquivo);
-            this.Controls.Add(this.cboProduto);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstoque);
-            this.Controls.Add(this.tabMovimentacao);
-            this.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FLoja";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.tabMovimentacao.ResumeLayout(false);
-            this.tabCompra.ResumeLayout(false);
-            this.tabCompra.PerformLayout();
-            this.tabVenda.ResumeLayout(false);
-            this.tabVenda.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(15F, 38F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1089, 719);
+            Controls.Add(btnExcel);
+            Controls.Add(btnArquivo);
+            Controls.Add(btnSalvar);
+            Controls.Add(btnNovo);
+            Controls.Add(btnPesquisar);
+            Controls.Add(label9);
+            Controls.Add(txtBoxArquivo);
+            Controls.Add(cboProduto);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtEstoque);
+            Controls.Add(tabMovimentacao);
+            Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            Name = "FLoja";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Form1";
+            tabMovimentacao.ResumeLayout(false);
+            tabCompra.ResumeLayout(false);
+            tabCompra.PerformLayout();
+            tabVenda.ResumeLayout(false);
+            tabVenda.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -466,6 +473,7 @@ namespace estudoCasoLojaInfo
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboProdutoEntrada;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
 
