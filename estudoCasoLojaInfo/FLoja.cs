@@ -61,7 +61,6 @@ namespace estudoCasoLojaInfo
 
             popup.Controls.Add(label);
 
-            // Calcula a posição correta para exibir o popup
             var x = Location.X + Width - popup.Width - 11;
             var y = Location.Y + Height - popup.Height - 17;
             popup.Location = new Point(x, y);
@@ -148,7 +147,7 @@ namespace estudoCasoLojaInfo
 
             foreach (var c in dados)
             {
-                txtBoxArquivo.Text += $"\r\n Nome: {c.nome} - estoque: {c._estoque} - movimentação: {c._valor}\r\n"; //  - movimentação: {c._valor:C}
+                txtBoxArquivo.Text += $"\r\n Nome: {c.nome} - estoque: {c._estoque} - movimentação: {c._valor}\r\n";
             }
 
             if (txtBoxArquivo.Text.Trim() == "")
@@ -164,7 +163,7 @@ namespace estudoCasoLojaInfo
 
             foreach (var c in dados)
             {
-                txtBoxArquivo.Text += $"\r\n Nome: {c.nome} - estoque: {c._estoque} - movimentação: {c._valor}\r\n"; //  - movimentação: {c._valor:C}
+                txtBoxArquivo.Text += $"\r\n Nome: {c.nome} - estoque: {c._estoque} - movimentação: {c._valor}\r\n";
             }
 
             if (txtBoxArquivo.Text.Trim() == "")

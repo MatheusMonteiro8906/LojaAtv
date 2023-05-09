@@ -56,8 +56,6 @@ namespace estudoCasoLojaInfo
 
         }
 
-        //
-
         public void GravarMovimentacao()
         {
             var listaProdutos = ConsultarArquivo();
