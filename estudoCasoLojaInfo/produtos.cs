@@ -106,7 +106,6 @@ namespace estudoCasoLojaInfo
 
             if (File.Exists(arquivoCaminho))
             {
-                //carrega arquivo para leitura -- using libera recurso apos utilizacao
                 using var arquivo = new StreamReader(arquivoCaminho);
 
                 string linhaArquivo;
@@ -115,7 +114,7 @@ namespace estudoCasoLojaInfo
                 while ((linhaArquivo = arquivo.ReadLine()) != null)
                 {
                     i++;
-                    if (i == 1) continue; //ignora a linha 1 -- continue volta ao inicio do laço de rep
+                    if (i == 1) continue; 
                     var produtosArquivo = linhaArquivo.Split(';');
 
                     var produto = new produtos();

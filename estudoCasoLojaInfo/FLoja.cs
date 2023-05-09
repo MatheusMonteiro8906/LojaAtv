@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using OfficeOpenXml;
 
@@ -19,6 +21,64 @@ namespace estudoCasoLojaInfo
         produtos monitor = new();
         produtos HDMI = new();
         int indexCbo;
+
+        private void ShowPopup(string message)
+        {
+            var popup = new Form()
+            {
+                FormBorderStyle = FormBorderStyle.None,
+                BackColor = Color.GhostWhite,
+                StartPosition = FormStartPosition.Manual,
+                Width = 360,
+                Height = 50,
+                TopMost = true,
+                ShowInTaskbar = false
+            };
+
+            const int borderRadius = 5;
+
+            var path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.StartFigure();  //eu nunca vou entender o que eu fiz aqui, mas deu certo
+            path.AddArc(0, 0, borderRadius * 2, borderRadius * 2, 180, 90);
+            path.AddLine(borderRadius, 0, Width - borderRadius, 0);
+            path.AddArc(Width - borderRadius * 2, 0, borderRadius * 2, borderRadius * 2, 270, 90);
+            path.AddLine(Width, borderRadius, Width, Height - borderRadius);
+            path.AddArc(Width - borderRadius * 2, Height - borderRadius * 2, borderRadius * 2, borderRadius * 2, 0, 90);
+            path.AddLine(Width - borderRadius, Height, borderRadius, Height);
+            path.AddArc(0, Height - borderRadius * 2, borderRadius * 2, borderRadius * 2, 90, 90);
+            path.CloseFigure();
+
+            popup.Region = new Region(path);
+
+            var label = new Label()
+            {
+                Text = message,
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                ForeColor = Color.Black,
+                AutoSize = true,
+                Location = new Point(10, 10),
+            };
+
+            popup.Controls.Add(label);
+
+            // Calcula a posição correta para exibir o popup
+            var x = Location.X + Width - popup.Width - 11;
+            var y = Location.Y + Height - popup.Height - 17;
+            popup.Location = new Point(x, y);
+
+            Task.Delay(2000).ContinueWith(_ =>
+            {
+                if (!popup.IsDisposed)
+                {
+                    popup.BeginInvoke(new Action(() =>
+                    {
+                        popup.Close();
+                    }));
+                }
+            });
+
+            popup.Show();
+        }
 
         public void salvarExcel()
         {
@@ -93,7 +153,7 @@ namespace estudoCasoLojaInfo
 
             if (txtBoxArquivo.Text.Trim() == "")
             {
-                MessageBox.Show("Não existem registros!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ShowPopup("Nenhum registro encontrado!");
             }
         }
 
@@ -109,7 +169,7 @@ namespace estudoCasoLojaInfo
 
             if (txtBoxArquivo.Text.Trim() == "")
             {
-                MessageBox.Show("Não existem registros!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ShowPopup("Nenhum registro encontrado!");
             }
         }
 
@@ -130,7 +190,6 @@ namespace estudoCasoLojaInfo
             cboProdutoEntrada.Enabled = false;
             LimparDados();
         }
-
 
         public void ativarLucro()
         {
