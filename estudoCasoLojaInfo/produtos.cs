@@ -84,6 +84,7 @@ namespace estudoCasoLojaInfo
             {
                 string arquivoCaminho = @"C:\arquivos\estoque.txt";
                 using var arquivoReader = new StreamReader(arquivoCaminho);
+                arquivoReader.Close();
 
                 File.Delete(arquivoCaminho);
 

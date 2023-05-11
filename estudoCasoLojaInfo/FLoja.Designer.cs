@@ -29,6 +29,7 @@ namespace estudoCasoLojaInfo
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLoja));
             cboProduto = new System.Windows.Forms.ComboBox();
             label2 = new System.Windows.Forms.Label();
@@ -60,6 +61,8 @@ namespace estudoCasoLojaInfo
             btnSalvar = new System.Windows.Forms.Button();
             btnArquivo = new System.Windows.Forms.Button();
             btnExcel = new System.Windows.Forms.Button();
+            btnApagar = new System.Windows.Forms.Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             tabMovimentacao.SuspendLayout();
             tabCompra.SuspendLayout();
             tabVenda.SuspendLayout();
@@ -403,19 +406,39 @@ namespace estudoCasoLojaInfo
             btnExcel.Enabled = false;
             btnExcel.FlatAppearance.BorderSize = 0;
             btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExcel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnExcel.Image = (System.Drawing.Image)resources.GetObject("btnExcel.Image");
-            btnExcel.Location = new System.Drawing.Point(898, 601);
+            btnExcel.Location = new System.Drawing.Point(9, 333);
             btnExcel.Name = "btnExcel";
             btnExcel.Size = new System.Drawing.Size(86, 76);
             btnExcel.TabIndex = 22;
             btnExcel.UseVisualStyleBackColor = false;
             btnExcel.Click += button1_Click_1;
             // 
+            // btnApagar
+            // 
+            btnApagar.BackColor = System.Drawing.Color.Transparent;
+            btnApagar.Enabled = false;
+            btnApagar.FlatAppearance.BorderSize = 0;
+            btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnApagar.Image = (System.Drawing.Image)resources.GetObject("btnApagar.Image");
+            btnApagar.Location = new System.Drawing.Point(902, 588);
+            btnApagar.Name = "btnApagar";
+            btnApagar.Size = new System.Drawing.Size(81, 84);
+            btnApagar.TabIndex = 23;
+            btnApagar.UseVisualStyleBackColor = false;
+            btnApagar.Click += button1_Click_2;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // FLoja
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(15F, 38F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1089, 719);
+            Controls.Add(btnApagar);
             Controls.Add(btnExcel);
             Controls.Add(btnArquivo);
             Controls.Add(btnSalvar);
@@ -433,6 +456,7 @@ namespace estudoCasoLojaInfo
             Name = "FLoja";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += FLoja_Load;
             tabMovimentacao.ResumeLayout(false);
             tabCompra.ResumeLayout(false);
             tabCompra.PerformLayout();
@@ -474,6 +498,8 @@ namespace estudoCasoLojaInfo
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboProdutoEntrada;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

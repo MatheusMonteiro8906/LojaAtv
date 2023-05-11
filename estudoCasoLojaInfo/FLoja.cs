@@ -13,7 +13,9 @@ namespace estudoCasoLojaInfo
         public FLoja()
         {
             InitializeComponent();
+            timer1.Interval = 1000;
         }
+
         produtos produto = new();
         produtos HD500 = new();
         produtos HD1000 = new();
@@ -21,6 +23,7 @@ namespace estudoCasoLojaInfo
         produtos monitor = new();
         produtos HDMI = new();
         int indexCbo;
+        private int countdown = 6;
 
         private void ShowPopup(string message)
         {
@@ -180,6 +183,7 @@ namespace estudoCasoLojaInfo
             btnPesquisar.Enabled = false;
             btnSalvar.Enabled = false;
             btnExcel.Enabled = false;
+            btnApagar.Enabled = false;
 
             txtMovimentacao.Enabled = false;
             txtEstoque.Enabled = false;
@@ -246,6 +250,7 @@ namespace estudoCasoLojaInfo
             btnPesquisar.Enabled = true;
             btnSalvar.Enabled = true;
             btnExcel.Enabled = true;
+            btnApagar.Enabled = true;
 
             txtMovimentacao.Enabled = true;
             txtEstoque.Enabled = true;
@@ -472,8 +477,40 @@ namespace estudoCasoLojaInfo
         {
             salvarExcel();
             btnExcel.Enabled = false;
-            await Task.Delay(5000);
+            timer1.Start();
+            await Task.Delay(6000);
             btnExcel.Enabled = true;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            produto.ApagarArquivo();
+        }
+
+        private void FLoja_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+            if (countdown == 0)
+            {
+                timer1.Stop();
+                btnExcel.Text = "";
+            }
+
+            if (countdown != 0)
+            {
+                btnExcel.Text = $"   {countdown}";
+            }
+
+        }
+
+        private void progressCount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
