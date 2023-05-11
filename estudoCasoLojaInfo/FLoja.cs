@@ -38,7 +38,7 @@ namespace estudoCasoLojaInfo
             const int borderRadius = 5;
 
             var path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.StartFigure();  //eu nunca vou entender o que eu fiz aqui, mas deu certo
+            path.StartFigure();  //Eu absolutamente não sei como isso deu certo
             path.AddArc(0, 0, borderRadius * 2, borderRadius * 2, 180, 90);
             path.AddLine(borderRadius, 0, Width - borderRadius, 0);
             path.AddArc(Width - borderRadius * 2, 0, borderRadius * 2, borderRadius * 2, 270, 90);
@@ -79,6 +79,7 @@ namespace estudoCasoLojaInfo
             popup.Show();
         }
 
+
         public void salvarExcel()
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
@@ -112,6 +113,7 @@ namespace estudoCasoLojaInfo
                     }
                 });
             excel.SaveAs(new FileInfo(@"C:\arquivos\Registro.xlsx"));
+            MessageBox.Show($"Arquivo gerado com sucesso!!", "Tabela Excel", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void DefinirNomes()
@@ -466,9 +468,12 @@ namespace estudoCasoLojaInfo
             DefinirNomes();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
             salvarExcel();
+            btnExcel.Enabled = false;
+            await Task.Delay(5000);
+            btnExcel.Enabled = true;
         }
     }
 }
